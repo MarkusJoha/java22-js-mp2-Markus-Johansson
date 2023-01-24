@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+
+    <script src="js/script.js" defer></script>
+    <title>Rock Paper Scissors</title>
+
+</head>
+<body>
+    <div id="gameDiv">
+        <h1 class="gameText">Welcome to the fight of the century. Rock, Paper, Scissors against a computer! Do you have what it takes to beat a computer? Let's find out!</h1>
+        <h1>Please enter your name</h1>
+        
+        <form onsubmit="onFormSubmit(event)">
+            <input type="text" id="playerName" name="playerName">
+            <input id="playerNameBtn" type="submit" value="Spela!">
+        </form>
+        <button id="rematch" onclick="refreshPage()">Rematch!</button>
+
+        <h1 class="gameText" id="playerText">Player: </h1>
+        <h1 class="gameText" id="computerText">Computer: </h1>
+        <h1 class="gameText" id="resultText">Result: </h1>
+        <h1 class="gameText" id="turnCounter">Turns: </h1>
+
+        <button class="choiceBtn" onclick="turn()">✊</button>
+        <button class="choiceBtn" onclick="turn()">✋</button>
+        <button class="choiceBtn" onclick="turn()">✌️</button>
+        <h1 id="playerWinsLabel">Player Wins: </h1>
+        <h1 id="computerWinsLabel">Computer Wins: </h1>
+    </div>
+</body>
+</html>

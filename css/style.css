@@ -1,0 +1,18 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 18px;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;
+    background-image: url(/img/gettyimages_136886425.jpg);
+    background-size: cover;
+}
+
+#gameDiv {
+    text-align: center;
+}
+#rematch {
+    display: none;
+    width: 200px;
+    height: 50px;
+}
