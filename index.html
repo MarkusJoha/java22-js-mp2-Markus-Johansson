@@ -16,20 +16,20 @@
         <h1 class="gameText">Welcome to the fight of the century. Rock, Paper, Scissors against a computer! Do you have what it takes to beat a computer? Let's find out!</h1>
         <h1>Please enter your name</h1>
         
-        <form onsubmit="onFormSubmit(event)">
+        <form>
             <input type="text" id="playerName" name="playerName">
             <input id="playerNameBtn" type="submit" value="Spela!">
         </form>
-        <button id="rematch" onclick="refreshPage()">Rematch!</button>
+        <button id="rematch">Rematch!</button>
 
         <h1 class="gameText" id="playerText">Player: </h1>
         <h1 class="gameText" id="computerText">Computer: </h1>
         <h1 class="gameText" id="resultText">Result: </h1>
         <h1 class="gameText" id="turnCounter">Turns: </h1>
 
-        <button class="choiceBtn" onclick="turn()">✊</button>
-        <button class="choiceBtn" onclick="turn()">✋</button>
-        <button class="choiceBtn" onclick="turn()">✌️</button>
+        <button class="choiceBtn">✊</button>
+        <button class="choiceBtn">✋</button>
+        <button class="choiceBtn">✌️</button>
         <h1 id="playerWinsLabel">Player Wins: </h1>
         <h1 id="computerWinsLabel">Computer Wins: </h1>
     </div>
