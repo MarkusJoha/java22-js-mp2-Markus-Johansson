@@ -6,6 +6,7 @@ const choiceBtns = document.querySelectorAll(".choiceBtn");
 const playerNameBtn = document.querySelector('#playerNameBtn');
 const form = document.querySelector('form');
 let playerName = document.querySelector('#playerName');
+let rematch = document.querySelector('#rematch');
 let player;
 let computer;
 let result;
@@ -13,13 +14,18 @@ let turns = 1;
 let playerWins = 0;
 let computerWins = 0;
 
-function onFormSubmit(event) {
+playerNameBtn.addEventListener('click', function(event){
     event.preventDefault();
     playerText.innerHTML = playerName.value + ': ';
-}
+});
+
+rematch.addEventListener('click', function() {
+    location.reload();
+},false);
 
 
 choiceBtns.forEach(button => button.addEventListener("click", () => {
+    turn();
     player = button.textContent;
     computerTurn();
     playerText.textContent = `${playerName.value}: ${player}`;
@@ -77,7 +83,4 @@ function turn() {
         const rematchBtn = document.querySelector('#rematch');
         rematchBtn.style.display = 'inherit'
     } 
-}
-function refreshPage() {
-    location.reload();
 }
