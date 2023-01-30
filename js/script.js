@@ -25,7 +25,8 @@ rematch.addEventListener('click', function() {
 
 
 choiceBtns.forEach(button => button.addEventListener("click", () => {
-    turn();
+    document.getElementById('turnCounter').innerHTML = 'Turns: ' + turns++;
+    rematchCheck();
     player = button.textContent;
     computerTurn();
     playerText.textContent = `${playerName.value}: ${player}`;
@@ -77,10 +78,12 @@ function checkWinner() {
         return (player == '✊') ? 'You Win!' : 'You Lose!'
     }
 }
-function turn() {
-    document.getElementById('turnCounter').innerHTML = 'Turns: ' + turns++;
-    if(computerWins + playerWins == 2) {
+
+function rematchCheck() {
+    if(computerWins == 3 || playerWins == 3) {
+        turns = 0;
         const rematchBtn = document.querySelector('#rematch');
-        rematchBtn.style.display = 'inherit'
+        rematchBtn.style.display = 'inherit';
+        choiceBtns.removeEventListener('click', myFunction);
     } 
 }
